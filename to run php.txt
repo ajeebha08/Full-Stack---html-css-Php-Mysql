@@ -1,0 +1,3 @@
+http://localhost/IWTProjectSnapmuse/login.php
+
+http://localhost/phpmyadmin/

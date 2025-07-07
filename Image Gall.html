@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flick Nest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            object-fit: cover;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .related {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0,0,0,0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            z-index: 2;
+        }
+        .gallery img:active + .related {
+            display: block;
+        }
+        .related img {
+            width: 80px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .related img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to SnapScape</h1>
+    <div class="gallery">
+        <div style="position: relative;">
+            <img src="https://source.unsplash.com/random/300x200?v=1" alt="Image 1">
+            <div class="related">
+                <p>Related Images:</p>
+                <img src="https://source.unsplash.com/random/100x100?v=11" alt="Related 1">
+                <img src="https://source.unsplash.com/random/100x100?v=12" alt="Related 2">
+                <img src="https://source.unsplash.com/random/100x100?v=13" alt="Related 3">
+            </div>
+        </div>
+        <img src="https://source.unsplash.com/random/300x200?v=2" alt="Image 2">
+        <img src="https://source.unsplash.com/random/300x200?v=3" alt="Image 3">
+        <img src="https://source.unsplash.com/random/300x200?v=4" alt="Image 4">
+        <img src="https://source.unsplash.com/random/300x200?v=5" alt="Image 5">
+        <img src="https://source.unsplash.com/random/300x200?v=6" alt="Image 6">
+        <img src="https://source.unsplash.com/random/300x200?v=7" alt="Image 7">
+        <img src="https://source.unsplash.com/random/300x200?v=8" alt="Image 8">
+    </div>
+</body>
+</html>

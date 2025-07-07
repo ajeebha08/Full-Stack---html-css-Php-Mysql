@@ -1,0 +1,2 @@
+http://localhost/gallery/
+http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=gallery_db&table=users
